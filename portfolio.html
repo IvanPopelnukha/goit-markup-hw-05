@@ -1,140 +1,238 @@
 <!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <!--Шапка сайту-->
-<header class="header container"> 
-    <div class="header-flex">
-      <a href="./index.html" class="logo"><span class= "logo-accent">Web</span>Studio</a>
-      <ul class="nav">
-      <li class="item"><a href="./index.html" class="nav-menu ">Студія</a></li>
-      <li class="item"><a href="./portfolio.html" class="nav-menu curent ">Портфоліо</a></li>
-      <li class="item"><a href="" class="nav-menu">Контакти</a></li>
-      </ul>
-      <ul class="nav-contact">
-      <li class="item">
-        <a href="mailto:info@devstudio.com" class=" link">
-           <svg class="icon-header" width="16" height="12"><use href="./images/symbol-defs.svg#icon-envelope"></use></svg>
-           info@devstudio.com
-        </a>
-      </li>
-      <li class="item">
-        <a href="tel:+380961111111" class="link">
-          <svg class="icon-header"  width="10" height="16"><use href="./images/symbol-defs.svg#icon-smartphone" ></use></svg>
-          +38 096 111 11 11
-        </a>
-      </li>
-      </ul>
-    </div>
-</header>
-<!--Контент сторінки-->
-<main class="container portfolio">
-    <section class="section-portfolio">
-        <h1 class="section-header">Портфоліо</h1>
-        <ul class="button-portfolio">
-            <li><button type="button" class="btn">Усі</button></li>
-            <li><button type="button" class="btn">Веб-сайти</button></li>
-            <li><button type="button" class="btn">Додатки</button></li>
-            <li><button type="button" class="btn">Дизайн</button></li>
-            <li><button type="button" class="btn">Маркетинг</button></li>
-        </ul>
-        <ul class="project" >
-            <li class="project-card">
-                <img src="./images/portfolio/pone.jpg" alt="Веб-сайт">
-                <h2 class="project-title">Технокряк</h2>
-                <p class="project-text">Веб-сайт</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-flex">
+        <nav class="nav-flex">
+          <a href="./index.html" class="logo link"
+            >Web<span class="logo-header">Studio</span></a
+          >
+          <ul class="nav list">
+            <li class="nav-link">
+              <a href="./index.html" class="item link">Studio</a>
             </li>
-            <li class="project-card">
-                <img src="./images/portfolio/ptwo.jpg" alt="Дизайн">
-                <h2 class="project-title">Постер New Orlean vs Golden Star</h2>
-                <p class="project-text">Дизайн</p>
+            <li class="nav-link">
+              <a href="./portfolio.html" class="item link current">Portfolio</a>
             </li>
-            <li class="project-card">
-                <img src="./images/portfolio/pthree.jpg" alt="Додаток">
-                <h2 class="project-title">Ресторан Seafood</h2>
-                <p class="project-text">Додаток</p>
+            <li class="nav-link"><a href="" class="item link">Contacts</a></li>
+          </ul>
+        </nav>
+        <address class="address">
+          <ul class="address-list list">
+            <li class="address-link">
+              <a href="mailto:info@devstudio.com" class="item link"
+                >info@devstudio.com</a
+              >
             </li>
-            <li class="project-card">
-                <img src="./images/portfolio/pfour.jpg" alt="Маркетинг">
-                <h2 class="project-title">Проєкт Prime</h2>
-                <p class="project-text">Маркетинг</p>
+            <li class="address-link">
+              <a href="tel:+110001111111" class="item link"
+                >+11 (000) 111-11-11</a
+              >
             </li>
-            <li class="project-card">
-                <img src="./images/portfolio/pfive.jpg" alt="Додаток">
-                <h2 class="project-title">Проєкт Boxes</h2>
-                <p class="project-text">Додаток</p>
-            </li>
-            <li class="project-card">
-                <img src="./images/portfolio/psix.jpg" alt="Веб-сайт">
-                <h2 class="project-title">Inspiration has no Borders</h2>
-                <p class="project-text">Веб-сайт</p>
-            </li>
-            <li class="project-card">
-                <img src="./images/portfolio/pseven.jpg" alt="Дизайн">
-                <h2 class="project-title">Видання Limited Edition</h2>
-                <p class="project-text">Дизайн</p>
-            </li>
-            <li class="project-card">
-                <img src="./images/portfolio/peight.jpg" alt="Маркетинг">
-                <h2 class="project-title">Проєкт LAB</h2>
-                <p class="project-text">Маркетинг</p>
-            </li>
-            <li class="project-card">
-                <img src="./images/portfolio/pnine.jpg" alt=">Додаток">
-                <h2 class="project-title">Growing Business</h2>
-                <p class="project-text">Додаток</p>
-            </li>
-        </ul>
-    </section>
-</main>
-<!--Футер сайту-->
-<footer class="footer">
-    <div class="container footer-flex">
-      <div> 
-        <a href="/index.html" class="footer-logo"><span class="footer-accent">Web</span>Studio</a>
-        <address>
-          <ul class="footer-addres">
-            <li><a href="https://goo.gl/maps/tBN6FuTS2oSwnWbi7" class="addres-map">м. Київ, пр-т Лесі Українки, 26</a></li>
-            <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-            <li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
           </ul>
         </address>
       </div>
-      <div class="footer-social">
-        <p class="social-header">приєднуйтесь</p>
-        <div class="social-link">
-            <a href="" class="icon-border">
-             <svg class="social-icon" width="20" height="20">
-             <use href="./images/symbol-defs.svg#icon-instagram"></use>
-            </svg>
-            </a>
-             <a href="" class="icon-border">
-               <svg class="social-icon" width="20" height="20">
-               <use href="./images/symbol-defs.svg#icon-twitter"></use>
-               </svg>
-             </a>
-            <a href="" class="icon-border">
-             <svg class="social-icon" width="20" height="20">
-             <use href="./images/symbol-defs.svg#icon-facebook"></use>
-             </svg>
-            </a>
-             <a href="" class="icon-border">
-               <svg class="social-icon" width="20" height="20">
-               <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-               </svg>
-            </a>  
+    </header>
+    <main>
+      <section class="portfolio">
+        <div class="container">
+          <h1 class="visually-hidden">Portfolio</h1>
+          <ul class="btn-list list">
+            <li class="item"><button type="button" class="btn">All</button></li>
+            <li class="item">
+              <button type="button" class="btn">Web Site</button>
+            </li>
+            <li class="item"><button type="button" class="btn">App</button></li>
+            <li class="item">
+              <button type="button" class="btn">Design</button>
+            </li>
+            <li class="item">
+              <button type="button" class="btn">Marketing</button>
+            </li>
+          </ul>
+          <ul class="project list">
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/one.jpg"
+                  alt="Banking"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Banking App Interface Concept</h2>
+                  <p class="project-text">App</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/two.jpg"
+                  alt="Cashless"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Cashless Payment</h2>
+                  <p class="project-text">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/three.jpg"
+                  alt="Meditation"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Meditation App</h2>
+                  <p class="project-text">App</p>
+                </div></a
+              >
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/four.jpg"
+                  alt="Taxi Service"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Taxi Service</h2>
+                  <p class="project-text">Marketing</p>
+                </div></a
+              >
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/five.jpg"
+                  alt="Screen Illustrations"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Screen Illustrations</h2>
+                  <p class="project-text">Design</p>
+                </div></a
+              >
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/six.jpg"
+                  alt="Online Courses"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Online Courses</h2>
+                  <p class="project-text">Marketing</p>
+                </div></a
+              >
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/seven.jpg"
+                  alt="Instagram Stories Concept"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Instagram Stories Concept</h2>
+                  <p class="project-text">Design</p>
+                </div></a
+              >
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/eight.jpg"
+                  alt="Organic Food"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Organic Food</h2>
+                  <p class="project-text">Web Site</p>
+                </div></a
+              >
+            </li>
+            <li class="project-card">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/nine.jpg"
+                  alt="Fresh Coffee"
+                  width="360"
+                />
+                <div class="border">
+                  <h2 class="project-title">Fresh Coffee</h2>
+                  <p class="project-text">Web Site</p>
+                </div></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-flex">
+        <div class="footer-text">
+          <a href="./index.html" class="footer-logo link"
+            >Web<span class="footer-accent">Studio</span></a
+          >
+          <p class="text-footer">
+            Increase the flow of customers and sales for your business with
+            digital marketing &#38; growth solutions.
+          </p>
+        </div>
+        <div class="social-media">
+          <p class="social-header">Social media</p>
+          <ul class="social-flex list">
+            <li class="social-list">
+              <a href="" class="icon-bgr">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list">
+              <a href="" class="icon-bgr">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list">
+              <a href="" class="icon-bgr">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list">
+              <a href="" class="icon-bgr">
+                <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </body>
-  </html>
+</html>
