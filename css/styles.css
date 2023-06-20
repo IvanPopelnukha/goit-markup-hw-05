@@ -16,6 +16,8 @@ html {
     --ocean-color: #404BBF;
     --light-slate-color:#8E8F99;
     --green-color: #31D0AA;
+    --navy-blue-modal: rgba(46, 47, 66, 0.4);
+    --dairy-color: #FCFCFC;
 }
 body {
   padding-top: 0;
@@ -30,6 +32,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  /* transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 h1,
 h2,
@@ -63,12 +67,10 @@ img {
 }
 /* Header site */
 .site-header {
-/* position: relative; */
-
     display: flex;
     justify-content: center;
 
-    border-bottom: 1px solid var(--cornflower-color);
+    /* border-bottom: 1px solid var(--cornflower-color); */
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-flex {
@@ -100,20 +102,22 @@ img {
 }
 .nav {
     display: flex;
-
+    
     font-weight: 500;   
 }
 .nav .item {
+    display: block;
+
     padding-top: 24px;
     padding-bottom: 24px;
+
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav .item:hover ,
 .nav .item:focus {
     color: var(--ocean-color);
 }
 .nav .nav-link {
-    position: relative;
-
     margin-right: 40px;
     
     color: var(--navy-blue-color);
@@ -134,6 +138,8 @@ img {
     padding-bottom: 24px;
 
     color: var(--slate-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address .item:hover,
 .address .item:focus {
@@ -146,17 +152,18 @@ img {
     margin-right: 0;
 }
 .current {
+    position: relative;
+
     color: var(--ocean-color);
 }
 .current::after {
     position: absolute;
-    display: block;
 
     content: "";
 
     width: 100%;
     height: 4px;
-    bottom: -24px;
+    bottom: 0;
     left: 0;
 
     background-color: var(--ocean-color);
@@ -210,10 +217,12 @@ img {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .hero-btn:hover,
 .hero-btn:focus {
-    background-color: var(--ocean-color);
+    background-color: var(--ocean-color);   
 }
 /* features section */
 .visually-hidden {
@@ -338,6 +347,9 @@ img {
     justify-content: center;
     gap: 24px;
 }
+.team-icon {
+   fill: var(--cloud-color);
+}
 .team-iconbgr {
     display: flex;
     justify-content: center;
@@ -349,9 +361,8 @@ img {
    background-color: var(--iris-color); 
 
    border-radius: 50%;
-}
-.team-icon {
-   fill: var(--cloud-color);
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-iconbgr:hover,
 .team-iconbgr:focus {
@@ -374,9 +385,14 @@ img {
     border: 1px solid var(--light-slate-color);
     border-radius: 4px;
     color: var(--light-slate-color);
+
+    
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon {
     fill: currentColor;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-border:hover,
 .customers-border:focus {
@@ -444,12 +460,52 @@ img {
     background-color: var(--iris-color);
     
     border-radius: 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-bgr:hover,
 .icon-bgr:focus {
     background-color: var(--green-color);
-}
 
+    
+}
+/* MODAL */
+.backdrop {
+    position: fixed;
+
+    top: 0;
+    left: 0;    
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--navy-blue-modal);
+}
+.backdrop.is-hidden {
+    opacity: 0; 
+    pointer-events: none;
+
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+
+    min-width: 408px;
+    min-height: 584px;
+
+    background: var(--dairy-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.modal-button {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+
+
+}
 /* portfolio */
 .portfolio {
     padding-top: 96px;
@@ -478,6 +534,10 @@ img {
     border: 1px solid var(--cornflower-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-list .item {
     margin-right: 24px;
@@ -500,13 +560,17 @@ img {
     margin-bottom: 48px;
 
     background-color: var(--white-color);  
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .project-card a {
     display: block;
 }
 .project-card:hover,
 .project-card:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);   
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);    
 }
 .project-card:hover .content,
 .project-card:focus .content {
@@ -523,6 +587,8 @@ img {
     position: absolute;
 
     top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
 
@@ -536,7 +602,10 @@ img {
     opacity: 0;
 
     transform: translateY(100%);
+
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
 }    
 .project-card:nth-child(3n) {
     margin-right: 0;
