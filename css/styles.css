@@ -603,8 +603,6 @@ img {
 .project-box {
     margin-right: 24px;
     margin-bottom: 48px;
-
-    transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 .project-box:nth-child(3n) {
     margin-right: 0;
@@ -654,7 +652,9 @@ img {
 
     transform: translateY(100%);
 
-    transition: transform var(--transition-duration) var(--timing-function);  
+    transition: transform var(--transition-duration) var(--timing-function),
+    box-shadow var(--transition-duration) var(--timing-function)
+     
 }    
 .border {
     padding: 32px 16px;
