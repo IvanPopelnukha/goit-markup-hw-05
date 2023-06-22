@@ -613,10 +613,10 @@ img {
 .project-card {
     display: block;
 
-    background-color: var(--white-color);  
-
-    transition: box-shadow var(--transition-duration) var(--timing-function),
-     opacity var(--transition-duration) var(--timing-function);   
+    background-color: var(--white-color);    
+}
+.project-card {
+    transition: box-shadow var(--transition-duration) var(--timing-function), opacity var(--transition-duration) var(--timing-function);
 }
 /* transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 .project-card:hover,
