@@ -653,7 +653,7 @@ img {
     transform: translateY(100%);
 
     transition: transform var(--transition-duration) var(--timing-function),
-    box-shadow var(--transition-duration) var(--timing-function)
+    box-shadow var(--transition-duration) var(--timing-function);
      
 }    
 .border {
